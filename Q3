@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+
+    char n[99][200];
+    char t[99][200];
+    int i = 0 ,j = 0;
+    int ad= 0;
+
+    do
+    {
+        printf("1 -continuar adicionando o número.\n");
+        printf("2 -  mostrar os números cadastrado e encerrar!\n");
+        scanf("%d", &ad);
+
+        if (ad== 1)
+        {
+            printf("Digite o %d° nome: ", i + 1);
+            scanf("%s", &n[i]);
+
+            printf("Digite o %d° telefone: ", i + 1);
+            scanf("%s", &t[i]);
+
+            fflush(stdin);
+
+            i = i + 1;
+        }
+
+    } while (ad== 1);
+
+    for (j = 0; j <= i; j++)
+    {
+        printf("%d° Cadastro\n", j + 1);
+        printf("Nome: %s\n", n[j]);
+        printf("Telefone: %s\n", t[j]);
+
+       
+    }
+
+    return 0;
+}
